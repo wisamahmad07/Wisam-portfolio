@@ -1,0 +1,727 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* transition start */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+/* transition end */
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center;
+  align-items: center;
+  padding-inline: 30px;
+  margin: 0;
+  min-height: 100vh; /* Ensures the body takes at least full viewport height */
+  background-color: #f8f8f8; /* Light background color */
+  color: white; /* Default text color */
+}
+
+@media (max-width: 650px) {
+  body {
+    padding-inline: 15px;
+  }
+}
+
+#page1 {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+#page2 {
+  margin-bottom: 30px;
+}
+/* Home css */
+#page1 .reach {
+  display: flex;
+  justify-content: space-around;
+}
+#page1 .social-icons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color: #ccc;
+}
+
+#page1 .image-section:hover .social-icons {
+  opacity: 1;
+}
+
+#page1 .image-section:hover .profile-image {
+  filter: brightness(90%);
+}
+
+#page1 .social-icons a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+#page1 .container {
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  max-width: 1450px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#page1 .image-section {
+  flex: 1;
+  position: relative;
+}
+
+#page1 .profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: filter 0.5s ease;
+}
+
+#page1 .contact-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  margin-left: 100px;
+}
+
+#page1 .contact-section h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#page1 .profession {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+#page1 .btn {
+  background-color: #555;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+#page1 .btn:hover {
+  background-color: #201f1f;
+  transition: background-color 0.3s ease;
+}
+/* HOME MOBILE VERSION */
+@media (max-width: 700px) {
+  #page1 .container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center the items */
+  }
+
+  #page1 .image-section {
+    margin-bottom: 20px; /* Space below image */
+  }
+
+  #page1 .contact-section {
+    padding: 20px; /* Adjust padding for mobile */
+    margin-left: 0; /* Remove left margin */
+    align-items: center; /* Center align items */
+  }
+
+  #page1 .contact-section h1 {
+    font-size: 1.8rem; /* Adjust font size for mobile */
+  }
+
+  #page1 .profession {
+    font-size: 1.2rem; /* Adjust font size for mobile */
+  }
+
+  #page1 .btn {
+    margin-top: 20px; /* Space above button */
+    width: 100%; /* Full width button */
+    max-width: 300px; /* Limit max width */
+  }
+
+  /* Social icons may need adjustment */
+  #page1 .social-icons {
+    flex-direction: row; /* Adjust for smaller screen */
+    padding: 10px; /* Adjust padding for mobile */
+  }
+}
+/* Contact css */
+
+#page2 .container {
+  border-radius: 8px;
+  display: flex;
+  max-width: 1450px; /* Set width for container */
+  background-color: black; /* Set default text color to black inside the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#page2 .image-section {
+  flex: 1;
+  margin-right: 10px;
+  padding: 20px; /* Ensure space between image and contact section */
+}
+
+#page2 .contact-image,
+.profile-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+#page2 .contact-section {
+  flex: 1;
+  padding: 40px; /* Padding around contact details */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 100px;
+}
+
+#page2 .contact-section h1,
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 100px;
+  color: #fff;
+}
+
+#page2 .name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 7px;
+  color: #fff;
+}
+
+#page2 .email {
+  font-size: 1.2rem;
+  margin-bottom: 100px;
+  color: #fff;
+}
+
+#page2 .profession {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+#page2 .connect {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+/* Social Icons Styles */
+#page2 .social-icons {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#page2 .social-icons i {
+  margin: 0 7px;
+  padding: 5px 0px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: grey;
+  transition: color 0.5s ease;
+  cursor: pointer;
+}
+
+#page2 .social-icons i:hover {
+  color: #fff;
+}
+
+#page2 .social-icons a img {
+  width: 30px;
+  height: 30px;
+  gap: 0px 50px;
+}
+/* Contact Mobile CSS */
+@media (max-width: 850px) {
+  #page2 .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #page2 .image-section {
+    margin: 0;
+    text-align: center;
+    padding: 0px;
+  }
+
+  #page2 .contact-section {
+    margin-left: 0;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #page2 .contact-section h2,
+  #page2 .email {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #page2 .connect {
+    margin: 0px;
+  }
+  #page2 .contact-image {
+    max-width: 80%;
+  }
+}
+
+/* About css */
+#page3 .container {
+  border-radius: 8px; /* Optional: Rounds corners of the container */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  background-color: #b2b2b2;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  max-width: 1450px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+#page3 .text-content {
+  flex: 1;
+  text-align: justify;
+}
+#page3 h1 {
+  font-size: 48px;
+  color: #2b2b2b;
+  margin-bottom: 20px;
+  margin-left: 100px;
+}
+#page3 p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-left: 100px;
+}
+#page3 .image-container {
+  flex: 1;
+  text-align: center;
+}
+#page3 img {
+  max-width: 1000px;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+/* About Mobile Styles */
+@media (max-width: 850px) {
+  #page3 .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #page3 h1 {
+    font-size: 2rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  #page3 p {
+    font-size: 1rem; /* Adjust font size for mobile */
+    margin-left: 0; /* Remove left margin */
+    text-align: justify; /* Center the paragraph */
+  }
+
+  #page3 .image-container {
+    margin: 20px 0; /* Space above and below the image */
+  }
+
+  #page3 img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Button styles below the image */
+  #page3 .btn {
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 20px; /* Space above button */
+  }
+
+  #page3 .btn:hover {
+    background-color: #201f1f;
+    transition: background-color 0.3s ease;
+  }
+}
+
+/* exp_edu CSS */
+
+#page4 .container {
+  font-family: Arial, sans-serif;
+  background-color: #696262;
+  display: flex;
+  margin-bottom: 30px;
+  padding: 50px 30px;
+  height: 100%;
+  box-sizing: border-box;
+  max-width: 1450px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+#page4 h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#page4 .timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px 50px;
+  margin-left: 50px;
+}
+#page4 .year {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#page4 .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#page4 .organization {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+#page4 .description {
+  font-size: 16px;
+  line-height: 1.6;
+}
+#page4 .navigation {
+  margin-top: 20px;
+}
+
+#page4 button {
+  padding: 10px 15px;
+  background-color: #696262;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+#page4 button:hover {
+  background-color: #555;
+}
+
+/* exp_edu Mobile Styles */
+
+@media (min-width: 769px) {
+  #page4 .navigation {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #page4 .container {
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+  }
+  #page4 .timeline {
+    height: auto;
+    overflow: auto;
+    position: relative;
+    scroll-behavior: smooth;
+    margin: 0;
+  }
+  #page4 h1 {
+    font-size: 28px;
+    margin-top: 0.5rem;
+    margin-bottom: 20px;
+  }
+
+  #page4 .timeline {
+    margin-left: 0;
+    gap: 20px;
+  }
+
+  #page4 .BS,
+  #page4 .internship,
+  #page4 .dev {
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  #page4 .navigation {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+/* Skills CSS */
+
+#page5 .flexpage5 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+#page5 .centerdiv {
+  text-align: center;
+}
+
+#page5 .container {
+  border-radius: 8px;
+  padding: 50px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 1450px;
+  width: 100%;
+  margin-bottom: 30px;
+  color: #333;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+#page5 .pre-title {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+#page5 h1 {
+  font-size: 48px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+#page5 .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px 0px;
+}
+#page5 .skills-grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+#page5 .category-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#page5 .skill-item {
+  margin-bottom: 13px;
+}
+
+#page5 .skill-name1 {
+  margin-bottom: 3px;
+}
+
+#page5 .skill-bar {
+  height: 10px;
+  background-color: #ddd;
+  position: relative;
+}
+#page5 .skill-level {
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#page5 .btn-skill {
+  width: 90%;
+  display: inline-block;
+  padding: 10px;
+  background-color: #e0e0e0;
+  color: #111;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.7s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+#page5 .btn-skill:hover {
+  background-color: black;
+  color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 725px) {
+  #page5 .flexpage5 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #page5 .skill-category2 {
+    text-align: center;
+  }
+  #page5 .skills-grid,
+  #page5 .skills-grid2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #page5 .container {
+    padding: 50px;
+  }
+
+  #page5 h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Work CSS */
+
+/* General styles (laptop screens) */
+#page6 .container {
+  padding: 50px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  color: #fff;
+  max-width: 1450px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+#page6 h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+#page6 .work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 0px 30px;
+}
+#page6 .work-item {
+  text-align: center;
+}
+#page6 .work-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+#page6 .work-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#page6 .work-description {
+  font-size: 14px;
+  line-height: 1.5;
+}
+#page6 .image-section {
+  position: relative;
+}
+#page6 .social-icons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#page6 .image-section:hover .social-icons {
+  opacity: 1;
+}
+#page6 .image-section:hover .work-image {
+  filter: brightness(80%);
+}
+#page6 i:hover {
+  color: white;
+  transition: 0.5s ease;
+}
+#page6 .social-icons a {
+  color: #cbc3c3;
+  font-size: 24px;
+  text-decoration: none;
+}
+/* Remove navigation on laptop */
+@media (min-width: 769px) {
+  #page6 .navigation {
+    display: none;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  #page6 .container {
+    padding: 20px;
+  }
+  #page6 .work-grid {
+    grid-template-columns: 1fr;
+  }
+  #page6 .work-item {
+    display: none; /* Hide all items initially */
+  }
+  #page6 .navigation {
+    display: flex;
+    justify-content: space-around;
+  }
+  #page6 .page-indicator {
+    font-size: 16px;
+    color: #fff;
+  }
+}
+#page6 .navigation {
+  margin-top: 20px;
+}
+
+#page6 button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+#page6 button:hover {
+  background-color: #222020;
+}
