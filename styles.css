@@ -50,7 +50,7 @@ body {
   justify-content: space-between;
   max-width: 1450px;
   padding: 10px 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* More prominent shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 #page0 .logo {
@@ -60,7 +60,7 @@ body {
 #page0 .link {
   padding: 10px 10px;
   margin-left: 15px;
-  color: #eee; /* White text for contrast */
+  color: #eee;
   font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
