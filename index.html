@@ -11,6 +11,20 @@
     />
   </head>
   <body>
+    <!-- Content from NavBar -->
+    <section class="hidden">
+      <div id="page0">
+        <div class="container">
+          <div><img src="wisam logo.png" class="logo" alt="logo" /></div>
+          <a href="#page1" class="link">Home</a>
+          <a href="#page3" class="link">About Me</a>
+          <a href="#page4" class="link">Experience & Education</a>
+          <a href="#page5" class="link">Projects & Skills</a>
+          <a href="#page6" class="link">Sample Work</a>
+          <a href="#page2" class="link">Contact</a>
+        </div>
+      </div>
+    </section>
     <!--   Content from Page 1 -->
     <section class="hidden">
       <div id="page1">
@@ -633,6 +647,21 @@
         // Update work items when page loads and on window resize
         updateWorkItems();
         window.addEventListener("resize", updateWorkItems); // Reapply logic when window is resized
+      });
+    </script>
+    <!-- Link show hide -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const logo = document.querySelector("#page0 .logo");
+        const links = document.querySelectorAll("#page0 .link");
+
+        logo.addEventListener("click", function () {
+          links.forEach((link) => {
+            if (window.innerWidth <= 768) {
+              link.classList.toggle("hidden");
+            }
+          });
+        });
       });
     </script>
   </body>

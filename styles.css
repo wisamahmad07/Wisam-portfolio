@@ -24,14 +24,14 @@
 body {
   font-family: "Arial", sans-serif;
   display: flex;
-  flex-direction: column; /* Stack children vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-inline: 30px;
   margin: 0;
-  min-height: 100vh; /* Ensures the body takes at least full viewport height */
-  background-color: #f8f8f8; /* Light background color */
-  color: white; /* Default text color */
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  color: white;
 }
 
 @media (max-width: 650px) {
@@ -40,14 +40,78 @@ body {
   }
 }
 
+/* Navbar css */
+#page0 .container {
+  margin-top: 10px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1450px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* More prominent shadow */
+}
+
+#page0 .logo {
+  height: 37px;
+}
+
+#page0 .link {
+  padding: 10px 10px;
+  margin-left: 15px;
+  color: #eee; /* White text for contrast */
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.5s ease, background-color 0.7s ease; /* Smooth transition */
+  border-radius: 4px;
+}
+
+#page0 .link:hover {
+  color: #1a1a1a;
+  background-color: #fff; /* Highlight color */
+}
+
+#page0 img.logo {
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+@media (max-width: 768px) {
+  #page0 .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #page0 .link {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    opacity: 1; /* Fully visible initially */
+    max-height: 50px; /* Adjust based on your needs */
+    transition: max-height 0.3s ease, opacity 0.0001s ease; /* Smooth transition for height and opacity */
+    overflow: hidden;
+  }
+
+  #page0 .link.hidden {
+    opacity: 0; /* Fade out */
+    padding: 0;
+    margin: 0;
+    max-height: 0px; /* Hide the link smoothly */
+  }
+  #page0 img.logo {
+    padding: 0;
+    margin: 0;
+  }
+}
+/* Home css */
 #page1 {
   margin-bottom: 30px;
   margin-top: 30px;
 }
-#page2 {
-  margin-bottom: 30px;
-}
-/* Home css */
+
 #page1 .reach {
   display: flex;
   justify-content: space-around;
@@ -176,7 +240,9 @@ body {
   }
 }
 /* Contact css */
-
+#page2 {
+  margin-bottom: 30px;
+}
 #page2 .container {
   border-radius: 8px;
   display: flex;
