@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wisam Ahmad | Software Engineer</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232dd4bf'/><text x='50' y='70' font-family='sans-serif' font-size='58' font-weight='800' fill='%230d1117' text-anchor='middle'>W</text></svg>">
+    <link rel="icon" type="image/jpg" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuriX2eRTM1sHMl1MdfQCjRtd5zedo59d8AA&s">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,9 +42,7 @@
         .btn-p:disabled{opacity:.6;cursor:not-allowed;transform:none!important;box-shadow:none!important}
         .progress-bar{height:5px;background:var(--bg-el);border-radius:3px;overflow:hidden}
         .progress-fill{height:100%;border-radius:3px;width:0;transition:width 1.4s cubic-bezier(.4,0,.2,1)}
-        .tl-line{position:absolute;left:7px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--teal),var(--gold));opacity:.25}
-        .tl-dot{position:absolute;left:0;top:22px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--teal);transition:all .3s;z-index:1}
-        .tl-item:hover .tl-dot{background:var(--teal);box-shadow:0 0 14px rgba(45,212,191,.4)}
+        /* Removed Timeline CSS */
         .tag{display:inline-block;padding:4px 12px;font-size:.72rem;font-weight:500;background:rgba(45,212,191,.07);color:var(--teal);border:1px solid rgba(45,212,191,.13);border-radius:6px;transition:all .3s}
         .tag:hover{background:rgba(45,212,191,.14);border-color:rgba(45,212,191,.28);transform:translateY(-1px)}
         .tag.g{background:rgba(212,165,116,.07);color:var(--gold);border-color:rgba(212,165,116,.13)}
@@ -74,7 +72,7 @@
         @keyframes sdp{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.4)}50%{box-shadow:0 0 0 6px rgba(34,197,94,0)}}
         .pimg-w{position:relative;overflow:hidden;border-radius:14px 14px 0 0}
         .pimg-w img{width:100%;height:200px;object-fit:cover;transition:transform .6s}
-        .card:hover .pimg-w img{transform:scale(1.06)}
+        .card:hover .pimg-w img, .svc-card:hover .pimg-w img{transform:scale(1.06)}
         .pimg-ov{position:absolute;inset:0;background:linear-gradient(to top,var(--bg-card) 0%,transparent 60%)}
         .grid-bg{background-image:linear-gradient(rgba(240,246,252,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(240,246,252,.015) 1px,transparent 1px);background-size:64px 64px}
         .social-icon{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;background:var(--bg-card);border:1px solid var(--brd);color:var(--tx2);font-size:1.1rem;transition:all .3s;text-decoration:none}
@@ -142,7 +140,7 @@
                 <div class="stat-divider"></div>
                 <div class="text-center"><div class="text-2xl font-bold mb-1">3.55</div><div style="color:var(--tx3);font-size:.78rem">CGPA</div></div>
                 <div class="stat-divider"></div>
-                <div class="text-center"><div class="text-2xl font-bold mb-1">500+</div><div style="color:var(--tx3);font-size:.78rem">Connections</div></div>
+                <div class="text-center"><div class="text-2xl font-bold mb-1">1000+</div><div style="color:var(--tx3);font-size:.78rem">Connections</div></div>
             </div>
         </div>
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
@@ -171,7 +169,7 @@
                 <div class="reveal rd4 card p-6">
                     <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background:rgba(107,159,255,.1)"><i class="fas fa-handshake" style="color:var(--blue)"></i></div>
                     <h3 class="font-semibold text-sm mb-1.5">Business Growth</h3>
-                    <p style="color:var(--tx2);font-size:.82rem;line-height:1.6">Beyond development, I mentor and collaborate with marketing teams to maximize the impact of websites and digital products, with a focus mainly on e-commerce brands and dental businesses.</p>
+                    <p style="color:var(--tx2);font-size:.82rem;line-height:1.6">I mentor and collaborate with marketing teams to develope best websites for businesses, maximize the impact of it, with a focus mainly on e-commerce brands and dental businesses.</p>
                 </div>
                 <div class="reveal rd5 card p-6">
                     <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style="background:rgba(45,212,191,.1)"><i class="fas fa-code-branch" style="color:var(--teal)"></i></div>
@@ -182,50 +180,46 @@
         </div>
     </section>
 
-    <!-- Experience -->
+    <!-- Experience - Timeline Removed -->
     <section id="experience" class="py-24 md:py-32 px-6" style="background:linear-gradient(180deg,transparent,rgba(45,212,191,.015) 50%,transparent)">
         <div class="max-w-3xl mx-auto">
             <div class="reveal"><div class="sl gold">Experience</div></div>
             <div class="reveal rd1"><h2 class="text-3xl md:text-4xl font-bold mb-14">Professional <span style="color:var(--gold)">journey</span></h2></div>
-            <div class="relative pl-10">
-                <div class="tl-line"></div>
-                <div class="tl-item relative mb-10 reveal rd2">
-                    <div class="tl-dot"></div>
-                    <div class="card p-6">
-                        <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
-                            <div><h3 class="font-semibold">Associate Software Engineer</h3><p style="color:var(--teal);font-size:.82rem;font-weight:500">Nitensclue</p></div>
-                            <span style="color:var(--tx3);font-size:.78rem;white-space:nowrap">Jan 2026 – Present</span>
-                        </div>
-                        <p style="color:var(--tx3);font-size:.8rem mb-4">Contract · On-site · Pakistan</p>
-                        <div class="flex flex-wrap gap-1.5"><span class="tag">MERN Stack</span></div>
+            
+            <div class="space-y-8">
+                <!-- Item 1 -->
+                <div class="reveal rd2 card p-6">
+                    <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                        <div><h3 class="font-semibold">Associate Software Engineer</h3><p style="color:var(--teal);font-size:.82rem;font-weight:500">Nitensclue</p></div>
+                        <span style="color:var(--tx3);font-size:.78rem;white-space:nowrap">Jan 2026 – Present</span>
                     </div>
+                    <p style="color:var(--tx3);font-size:.8rem; margin-bottom:12px">Contract · On-site · Pakistan</p>
+                    <div class="flex flex-wrap gap-1.5"><span class="tag">MERN Stack</span></div>
                 </div>
-                <div class="tl-item relative mb-10 reveal rd3">
-                    <div class="tl-dot" style="border-color:var(--gold)"></div>
-                    <div class="card p-6">
-                        <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
-                            <div><h3 class="font-semibold">Software Engineer — MERN Stack</h3><p style="color:var(--teal);font-size:.82rem;font-weight:500">CBSOL</p></div>
-                            <span style="color:var(--tx3);font-size:.78rem;white-space:nowrap">Sep 2025</span>
-                        </div>
-                        <p style="color:var(--tx3);font-size:.8rem mb-4">Full-time · On-site · Lahore</p>
-                        <div class="flex flex-wrap gap-1.5"><span class="tag">MERN Stack</span><span class="tag">Supabase</span></div>
+                
+                <!-- Item 2 -->
+                <div class="reveal rd3 card p-6">
+                    <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                        <div><h3 class="font-semibold">Software Engineer — MERN Stack</h3><p style="color:var(--teal);font-size:.82rem;font-weight:500">CBSOL</p></div>
+                        <span style="color:var(--tx3);font-size:.78rem;white-space:nowrap">Sep 2025</span>
                     </div>
+                    <p style="color:var(--tx3);font-size:.8rem; margin-bottom:12px">Full-time · On-site · Lahore</p>
+                    <div class="flex flex-wrap gap-1.5"><span class="tag">MERN Stack</span><span class="tag">Supabase</span></div>
                 </div>
-                <div class="tl-item relative reveal rd4">
-                    <div class="tl-dot" style="border-color:var(--gold)"></div>
-                    <div class="card p-6">
-                        <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
-                            <div><h3 class="font-semibold">Freelance Software Engineer</h3><p style="color:var(--gold);font-size:.82rem;font-weight:500">Self-employed</p></div>
-                            <span style="color:var(--tx3);font-size:.78rem;white-space:nowrap">Aug 2024 – Sep 2025</span>
-                        </div>
-                        <p style="color:var(--tx3);font-size:.8rem mb-3">1 year 2 months · Remote</p>
-                        <ul class="space-y-1.5" style="color:var(--tx2);font-size:.82rem;line-height:1.7">
-                            <li><span style="color:var(--teal)">•</span> Team Lead & Full Stack Dev — E-Commerce Platform (MERN)</li>
-                            <li><span style="color:var(--gold)">•</span> Solo Dev — Mosque Donation Website (WordPress + GiveWP)</li>
-                            <li><span style="color:var(--teal)">•</span> AI, Web & DevOps — Football Object Detection</li>
-                            <li><span style="color:var(--gold)">•</span> Solo Dev — 6 Statistic Calculators</li>
-                        </ul>
+                
+                <!-- Item 3 -->
+                <div class="reveal rd4 card p-6">
+                    <div class="flex flex-wrap justify-between items-start gap-2 mb-2">
+                        <div><h3 class="font-semibold">Freelance Software Engineer</h3><p style="color:var(--gold);font-size:.82rem;font-weight:500">Self-employed</p></div>
+                        <span style="color:var(--tx3);font-size:.78rem;white-space:nowrap">Aug 2024 – Sep 2025</span>
                     </div>
+                    <p style="color:var(--tx3);font-size:.8rem; margin-bottom:12px">1 year 2 months · Remote</p>
+                    <ul class="space-y-1.5" style="color:var(--tx2);font-size:.82rem;line-height:1.7">
+                        <li><span style="color:var(--teal)">•</span> Team Lead & Full Stack Dev — E-Commerce Platform (MERN)</li>
+                        <li><span style="color:var(--gold)">•</span> Solo Dev — Mosque Donation Website (WordPress + GiveWP)</li>
+                        <li><span style="color:var(--teal)">•</span> AI, Web & DevOps — Football Object Detection</li>
+                        <li><span style="color:var(--gold)">•</span> Solo Dev — 6 Statistic Calculators</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -237,11 +231,21 @@
             <div class="reveal"><div class="sl">Projects</div></div>
             <div class="reveal rd1 flex flex-wrap justify-between items-end gap-4 mb-14">
                 <h2 class="text-3xl md:text-4xl font-bold">Selected <span style="color:var(--teal)">work</span></h2>
-                <p style="color:var(--tx3);font-size:.82rem">4 major builds · 10+ contributions</p>
+                <p style="color:var(--tx3);font-size:.82rem">5 major builds · 10+ contributions</p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="reveal rd2 card overflow-hidden">
-                    <div class="pimg-w"><img src="https://picsum.photos/seed/poultryai/600/400.jpg" alt="PoultryProAI" loading="lazy"><div class="pimg-ov"></div></div>
+                    <div class="pimg-w"><img src="https://i.vimeocdn.com/video/2066396758-a1b5e33c23c0aff71084ecb0816cf083591ea93597145ee5008f64302ed5fa27-d?f=webp" alt="UncleKam" loading="lazy"><div class="pimg-ov"></div></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3"><span class="tag" style="font-size:.68rem">Company</span><span class="tag g" style="font-size:.68rem">AI SaaS</span></div>
+                        <h3 class="font-bold text-lg mb-2">Uncle Kam</h3>
+                        <p style="color:var(--tx2);font-size:.82rem;line-height:1.7;margin-bottom:14px">Responsible for the development and maintenance of a tax audit platform. I collaborate closely with senior engineers, Project Manager, and SQA, to deliver quality solutions for audit professionals.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-4"><span class="tag">MERN STACK</span><span class="tag b">STRIPE</span> <span class="tag b">ROLEBASED AUTH</span></div>
+                        <a href="https://poultry-pro-ai-git-main-wisam-ahmads-projects.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--teal);font-size:.8rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:gap .3s" onmouseenter="this.style.gap='9px'" onmouseleave="this.style.gap='5px'">Visit site <i class="fas fa-arrow-right" style="font-size:.65rem"></i></a>
+                    </div>
+                </div>
+                <div class="reveal rd2 card overflow-hidden">
+                    <div class="pimg-w"><img src="https://images.unsplash.com/photo-1589923188651-268a9765e432?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="PoultryProAI" loading="lazy"><div class="pimg-ov"></div></div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3"><span class="tag" style="font-size:.68rem">FYP Project</span><span class="tag g" style="font-size:.68rem">AI SaaS</span></div>
                         <h3 class="font-bold text-lg mb-2">PoultryProAI</h3>
@@ -251,7 +255,7 @@
                     </div>
                 </div>
                 <div class="reveal rd3 card overflow-hidden">
-                    <div class="pimg-w"><img src="https://picsum.photos/seed/ecommerce44/600/400.jpg" alt="E-Commerce Marketing Store" loading="lazy"><div class="pimg-ov"></div></div>
+                    <div class="pimg-w"><img src="https://media.istockphoto.com/id/2207271217/photo/optimization-of-procurement-or-purchasing-product-order-for-online-shopping-and-service.webp?a=1&b=1&s=612x612&w=0&k=20&c=P_y-L-YouyqzohO1ni94GlzDouI_VO11JVfX4zMW42c=" alt="E-Commerce Marketing Store" loading="lazy"><div class="pimg-ov"></div></div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3"><span class="tag g" style="font-size:.68rem">Freelance</span><span class="tag" style="font-size:.68rem">E-Commerce</span></div>
                         <h3 class="font-bold text-lg mb-2">E-Commerce Marketing Store</h3>
@@ -261,7 +265,7 @@
                     </div>
                 </div>
                 <div class="reveal rd4 card overflow-hidden">
-                    <div class="pimg-w"><img src="https://picsum.photos/seed/chatapp99/600/400.jpg" alt="Gen-Zatting" loading="lazy"><div class="pimg-ov"></div></div>
+                    <div class="pimg-w"><img src="https://images.unsplash.com/photo-1534224039826-c7a0eda0e6b3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGNvbm5lY3Rpb258ZW58MHx8MHx8fDA%3D" alt="Gen-Zatting" loading="lazy"><div class="pimg-ov"></div></div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3"><span class="tag" style="font-size:.68rem">Portfolio</span><span class="tag b" style="font-size:.68rem">Real-Time</span></div>
                         <h3 class="font-bold text-lg mb-2">Gen-Zatting</h3>
@@ -271,7 +275,7 @@
                     </div>
                 </div>
                 <div class="reveal rd3 card overflow-hidden">
-                    <div class="pimg-w"><img src="https://picsum.photos/seed/plantcv22/600/400.jpg" alt="Plant Disease Detection" loading="lazy"><div class="pimg-ov"></div></div>
+                    <div class="pimg-w"><img src="https://images.unsplash.com/photo-1692481061201-5767c19396af?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBsYW50JTIwZGlzZWFzZXxlbnwwfHwwfHx8MA%3D%3D" alt="Plant Disease Detection" loading="lazy"><div class="pimg-ov"></div></div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3"><span class="tag g" style="font-size:.68rem">Semester</span><span class="tag" style="font-size:.68rem">AI / CV</span></div>
                         <h3 class="font-bold text-lg mb-2">Plant Disease Detection</h3>
@@ -281,7 +285,7 @@
                     </div>
                 </div>
                 <div class="reveal rd4 card overflow-hidden">
-                    <div class="pimg-w"><img src="https://picsum.photos/seed/mosque55/600/400.jpg" alt="Mosque Donation Site" loading="lazy"><div class="pimg-ov"></div></div>
+                    <div class="pimg-w"><img src="https://images.unsplash.com/photo-1581141444721-0e6f8fa8397e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1vc3F1ZXxlbnwwfHwwfHx8MA%3D%3D" alt="Mosque Donation Site" loading="lazy"><div class="pimg-ov"></div></div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3"><span class="tag" style="font-size:.68rem">Freelance</span><span class="tag g" style="font-size:.68rem">WordPress</span></div>
                         <h3 class="font-bold text-lg mb-2">Mosque Donation Site</h3>
@@ -291,20 +295,30 @@
                     </div>
                 </div>
                 <div class="reveal rd5 card overflow-hidden">
-                    <div class="pimg-w"><img src="https://picsum.photos/seed/calculator77/600/400.jpg" alt="Statistics Calculators" loading="lazy"><div class="pimg-ov"></div></div>
+                    <div class="pimg-w"><img src="https://plus.unsplash.com/premium_photo-1680721445122-a61ab431cf8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FsY3VsYXRvcnN8ZW58MHx8MHx8fDA%3D" alt="Statistics Calculators" loading="lazy"><div class="pimg-ov"></div></div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3"><span class="tag b" style="font-size:.68rem">Personal</span><span class="tag" style="font-size:.68rem">Utility</span></div>
-                        <h3 class="font-bold text-lg mb-2">Statistics Calculators</h3>
+                        <h3 class="font-bold text-lg mb-2">6 Statistics Calculators</h3>
                         <p style="color:var(--tx2);font-size:.82rem;line-height:1.7;margin-bottom:14px">Collection of 6 statistical calculators built with vanilla HTML, CSS, and JavaScript for academic use.</p>
                         <div class="flex flex-wrap gap-1.5 mb-4"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
                         <a href="https://all-statistic-calculators.vercel.app" target="_blank" rel="noopener noreferrer" style="color:var(--teal);font-size:.8rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:gap .3s" onmouseenter="this.style.gap='9px'" onmouseleave="this.style.gap='5px'">View on Vercel <i class="fas fa-arrow-right" style="font-size:.65rem"></i></a>
+                    </div>
+                </div>
+                <div class="reveal rd5 card overflow-hidden">
+                    <div class="pimg-w"><img src="https://xboxwire.thesourcemediaassets.com/sites/2/2025/03/Hero-Image-af9f49713edb3baff096.jpg" alt="Statistics Calculators" loading="lazy"><div class="pimg-ov"></div></div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3"><span class="tag b" style="font-size:.68rem">Personal</span><span class="tag" style="font-size:.68rem">Utility</span></div>
+                        <h3 class="font-bold text-lg mb-2">Games Hub</h3>
+                        <p style="color:var(--tx2);font-size:.82rem;line-height:1.7;margin-bottom:14px">Developed a scalable Games Hub application using React, TypeScript, and Zustand, adhering to SOLID principles for high maintainability.</p>
+                        <div class="flex flex-wrap gap-1.5 mb-4"><span class="tag">Typescript</span><span class="tag">Reactjs</span><span class="tag">JavaScript</span></div>
+                        <a href="https://game-hub-react-intermediate-bywisamahmad-wisam-ahmads-projects.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--teal);font-size:.8rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:5px;transition:gap .3s" onmouseenter="this.style.gap='9px'" onmouseleave="this.style.gap='5px'">View on Vercel <i class="fas fa-arrow-right" style="font-size:.65rem"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services — How I Help -->
+    <!-- Services — How I Help (Images Added) -->
     <section id="services" class="py-24 md:py-32 px-6" style="background:linear-gradient(180deg,transparent,rgba(212,165,116,.015) 50%,transparent)">
         <div class="max-w-6xl mx-auto">
             <div class="reveal"><div class="sl gold">Services</div></div>
@@ -319,37 +333,45 @@
             </div>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="reveal rd2 svc-card">
-                    <div class="p-8 pb-0">
+                    <div class="pimg-w">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop" alt="Dental AI Services" loading="lazy">
+                        <div class="pimg-ov"></div>
+                    </div>
+                    <div class="p-8">
                         <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="background:linear-gradient(135deg,rgba(45,212,191,.15),rgba(45,212,191,.05))">
                             <i class="fas fa-tooth" style="color:var(--teal);font-size:1.4rem"></i>
                         </div>
                         <h3 class="font-bold text-xl mb-3">For Dental Practices</h3>
                         <p style="color:var(--tx2);font-size:.88rem;line-height:1.75;margin-bottom:20px">We provide cutting-edge AI automation solutions tailored for dental professionals — streamlining operations, enhancing patient engagement, and reducing front-desk labor costs through intelligent technology.</p>
-                    </div>
-                    <div class="px-8 py-6" style="border-top:1px solid var(--brd)">
-                        <ul class="space-y-3" style="color:var(--tx2);font-size:.85rem;line-height:1.7">
-                            <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--teal);font-size:.75rem"></i>AI-powered appointment scheduling & reminders</li>
-                            <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--teal);font-size:.75rem"></i>Automated patient follow-ups & reviews collection</li>
-                            <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--teal);font-size:.75rem"></i>Smart website that converts visitors into patients</li>
-                            <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--teal);font-size:.75rem"></i>Reduce front-desk workload by up to 60%</li>
-                        </ul>
+                        <div style="border-top:1px solid var(--brd);padding-top:20px;margin-top:20px">
+                            <ul class="space-y-3" style="color:var(--tx2);font-size:.85rem;line-height:1.7">
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--teal);font-size:.75rem"></i>AI-powered appointment scheduling & reminders</li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--teal);font-size:.75rem"></i>Automated patient follow-ups & reviews collection</li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--teal);font-size:.75rem"></i>Smart website that converts visitors into patients</li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--teal);font-size:.75rem"></i>Reduce front-desk workload by up to 60%</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="reveal rd3 svc-card">
-                    <div class="p-8 pb-0">
+                    <div class="pimg-w">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop" alt="E-Commerce Services" loading="lazy">
+                        <div class="pimg-ov"></div>
+                    </div>
+                    <div class="p-8">
                         <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-6" style="background:linear-gradient(135deg,rgba(212,165,116,.15),rgba(212,165,116,.05))">
                             <i class="fas fa-store" style="color:var(--gold);font-size:1.4rem"></i>
                         </div>
                         <h3 class="font-bold text-xl mb-3">For E-Commerce Brands</h3>
                         <p style="color:var(--tx2);font-size:.88rem;line-height:1.75;margin-bottom:20px">We help e-commerce brands acquire more customers and reduce operational costs by turning business ideas into high-converting websites powered by AI agents and smart automation workflows.</p>
-                    </div>
-                    <div class="px-8 py-6" style="border-top:1px solid var(--brd)">
-                        <ul class="space-y-3" style="color:var(--tx2);font-size:.85rem;line-height:1.7">
-                            <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--gold);font-size:.75rem"></i>High-converting store design & development</li>
-                            <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--gold);font-size:.75rem"></i>AI agents for customer support & product queries</li>
-                            <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--gold);font-size:.75rem"></i>Automated marketing funnels & email campaigns</li>
-                            <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--gold);font-size:.75rem"></i>Cut customer service labor costs significantly</li>
-                        </ul>
+                        <div style="border-top:1px solid var(--brd);padding-top:20px;margin-top:20px">
+                            <ul class="space-y-3" style="color:var(--tx2);font-size:.85rem;line-height:1.7">
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--gold);font-size:.75rem"></i>High-converting store design & development</li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--gold);font-size:.75rem"></i>AI agents for customer support & product queries</li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--gold);font-size:.75rem"></i>Automated marketing funnels & email campaigns</li>
+                                <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-0.5" style="color:var(--gold);font-size:.75rem"></i>Cut customer service labor costs significantly</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -424,11 +446,7 @@
                     <p style="color:var(--tx2);font-size:.95rem;line-height:1.8;font-style:italic">"I came to university as the best from my area but soon realized there were even better peers — which motivated me to grow."</p>
                     <p style="color:var(--teal);font-size:.8rem;font-weight:500;margin-top:8px">— Wisam Ahmad</p>
                 </div>
-                <div class="reveal rd5 quote-card gold-border">
-                    <p style="color:var(--tx2);font-size:.95rem;line-height:1.8;font-style:italic">"More human than human is our motto."</p>
-                    <p style="color:var(--gold);font-size:.8rem;font-weight:500;margin-top:8px">— Blade Runner (1982)</p>
-                </div>
-                <div class="reveal rd6 quote-card">
+                <div class="reveal rd6 quote-card gold-border">
                     <p style="color:var(--tx2);font-size:.95rem;line-height:1.8;font-style:italic">"In 1st semester, I never answered programming questions in class, but seeing others inspired me. I topped the midterm, shocking everyone — and my journey began."</p>
                     <p style="color:var(--teal);font-size:.8rem;font-weight:500;margin-top:8px">— Wisam Ahmad</p>
                 </div>
@@ -497,7 +515,7 @@
     <footer class="py-10 px-6" style="border-top:1px solid var(--brd)">
         <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4">
             <div class="font-bold text-sm">W<span style="color:var(--teal)">.</span>Ahmad</div>
-            <p style="color:var(--tx3);font-size:.75rem">&copy; 2025 Wisam Ahmad. All rights reserved.</p>
+            <p style="color:var(--tx3);font-size:.75rem">&copy; 2026 Wisam Ahmad. All rights reserved.</p>
             <div class="flex gap-3">
                 <a href="https://linkedin.com/in/wisam-ahmad" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://github.com/wisamahmad07" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -510,10 +528,6 @@
 
     <script>
     (function(){
-        const RESEND_API_KEY='re_YOUR_API_KEY_HERE';
-        const FROM_EMAIL='onboarding@resend.dev';
-        const TO_EMAIL='wisamahmad786@gmail.com';
-
         const menuBtn=document.getElementById('menuBtn'),
               mobMenu=document.getElementById('mobMenu'),
               mobOv=document.getElementById('mobOv'),
@@ -550,16 +564,40 @@
                 if(!f.ck(i.value)){i.classList.add('err');er.classList.add('show');v=false}else{i.classList.remove('err');er.classList.remove('show')}
             });
             if(!v)return;
-            const nm=document.getElementById('name').value.trim(),em=document.getElementById('email').value.trim(),sj=document.getElementById('subject').value.trim(),mg=document.getElementById('message').value.trim();
-            if(RESEND_API_KEY==='re_YOUR_API_KEY_HERE'){
-                window.location.href='mailto:'+TO_EMAIL+'?subject='+encodeURIComponent(sj)+'&body='+encodeURIComponent('Name: '+nm+'\nEmail: '+em+'\n\n'+mg);
-                showToast('Opening your email client to send the message.','fa-envelope');form.reset();return
-            }
+            
+            const nm=document.getElementById('name').value.trim(),
+                  em=document.getElementById('email').value.trim(),
+                  sj=document.getElementById('subject').value.trim(),
+                  mg=document.getElementById('message').value.trim();
+
+            const params = new URLSearchParams();
+            params.append('name', nm);
+            params.append('email', em);
+            params.append('subject', sj);
+            params.append('message', mg);
+
             setLoading(true);
-            try{
-                const r=await fetch('https://api.resend.com/emails',{method:'POST',headers:{'Authorization':'Bearer '+RESEND_API_KEY,'Content-Type':'application/json'},body:JSON.stringify({from:FROM_EMAIL,to:TO_EMAIL,subject:'Portfolio Contact: '+sj,html:`<div style="font-family:system-ui,sans-serif;color:#1a1a2e;max-width:560px;margin:0 auto;padding:24px 0"><div style="border-bottom:2px solid #2dd4bf;padding-bottom:16px;margin-bottom:24px"><h2 style="margin:0 0 4px;font-size:18px;color:#0d1117">New Message from Portfolio</h2></div><table style="font-size:14px;line-height:1.8;margin-bottom:20px"><tr><td style="color:#8b949e;padding-right:16px;white-space:nowrap"><strong>Name</strong></td><td>${nm}</td></tr><tr><td style="color:#8b949e;padding-right:16px;white-space:nowrap"><strong>Email</strong></td><td><a href="mailto:${em}" style="color:#2dd4bf;text-decoration:none">${em}</a></td></tr><tr><td style="color:#8b949e;padding-right:16px;white-space:nowrap"><strong>Subject</strong></td><td>${sj}</td></tr></table><div style="background:#f8f9fa;border-radius:8px;padding:16px;font-size:14px;color:#1a1a2e;line-height:1.7;white-space:pre-wrap">${mg}</div></div>`})});
-                if(r.ok){showToast('Message sent successfully! I\'ll get back to you soon.','fa-check-circle');form.reset()}else{const d=await r.json().catch(()=>({}));throw new Error(d.message||'Failed')}
-            }catch(err){console.error('Resend error:',err);showToast('Failed to send. Opening email client instead.','fa-exclamation-circle');window.location.href='mailto:'+TO_EMAIL+'?subject='+encodeURIComponent(sj)+'&body='+encodeURIComponent('Name: '+nm+'\nEmail: '+em+'\n\n'+mg)}finally{setLoading(false)}
+            try {
+                const response = await fetch(
+                    "https://script.google.com/macros/s/AKfycbzxmE8inyrO_ofrS4uPd1utJcpjH_QBwm92pQKK8qcBUzzT2W1yRy8IfRPo9QRgPhc/exec",
+                    {
+                        method: "POST",
+                        body: params,
+                    }
+                );
+                
+                if (response.ok) {
+                    showToast('Message sent successfully, thanks for reaching out!', 'fa-check-circle');
+                    form.reset();
+                } else {
+                    throw new Error('Server response was not ok');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showToast('Failed to send message. Please try again.', 'fa-exclamation-circle');
+            } finally {
+                setLoading(false);
+            }
         });
         ['name','email','subject','message'].forEach(id=>{document.getElementById(id).addEventListener('input',function(){this.classList.remove('err');document.getElementById(id+'Err').classList.remove('show')})});
 
@@ -568,7 +606,7 @@
 
         document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
 
-        /* Resume download — direct file from Vercel public folder */
+        /* Resume download */
         window.downloadResume=function(){
             const a=document.createElement('a');
             a.href='/WisamAhmadResume.pdf';
