@@ -19,10 +19,13 @@
         html{scroll-behavior:smooth}
         body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--tx);overflow-x:hidden}
         ::selection{background:rgba(45,212,191,.2);color:var(--tx)}
-        ::-webkit-scrollbar{width:5px}
+        
+        /* Updated Scrollbar: Wider (8px) and No Round Corners */
+        ::-webkit-scrollbar{width:8px}
         ::-webkit-scrollbar-track{background:var(--bg)}
-        ::-webkit-scrollbar-thumb{background:var(--bg-el);border-radius:3px}
+        ::-webkit-scrollbar-thumb{background:var(--bg-el);border-radius:0px}
         ::-webkit-scrollbar-thumb:hover{background:var(--tx3)}
+        
         .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
         .reveal.active{opacity:1;transform:translateY(0)}
         .rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}.rd4{transition-delay:.4s}.rd5{transition-delay:.5s}.rd6{transition-delay:.6s}
@@ -31,6 +34,10 @@
         .nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--teal);transition:width .3s}
         .nav-link:hover,.nav-link.active{color:var(--tx)}
         .nav-link:hover::after,.nav-link.active::after{width:100%}
+        
+        /* Scroll Progress Bar */
+        #scrollProgress{position:absolute;bottom:0;left:0;height:3px;background:var(--teal);width:0;z-index:60;transition:width 50ms linear}
+
         .card{background:var(--bg-card);border:1px solid var(--brd);border-radius:14px;transition:all .4s cubic-bezier(.4,0,.2,1)}
         .card:hover{background:var(--bg-card-h);border-color:var(--brd-h);transform:translateY(-5px);box-shadow:0 24px 48px rgba(0,0,0,.3)}
         .svc-card{background:var(--bg-card);border:1px solid var(--brd);border-radius:16px;transition:all .4s cubic-bezier(.4,0,.2,1);overflow:hidden}
@@ -42,7 +49,6 @@
         .btn-p:disabled{opacity:.6;cursor:not-allowed;transform:none!important;box-shadow:none!important}
         .progress-bar{height:5px;background:var(--bg-el);border-radius:3px;overflow:hidden}
         .progress-fill{height:100%;border-radius:3px;width:0;transition:width 1.4s cubic-bezier(.4,0,.2,1)}
-        /* Removed Timeline CSS */
         .tag{display:inline-block;padding:4px 12px;font-size:.72rem;font-weight:500;background:rgba(45,212,191,.07);color:var(--teal);border:1px solid rgba(45,212,191,.13);border-radius:6px;transition:all .3s}
         .tag:hover{background:rgba(45,212,191,.14);border-color:rgba(45,212,191,.28);transform:translateY(-1px)}
         .tag.g{background:rgba(212,165,116,.07);color:var(--gold);border-color:rgba(212,165,116,.13)}
@@ -84,6 +90,16 @@
         .quote-card.gold-border{border-left-color:var(--gold)}
         .quote-card.gold-border:hover{border-left-color:var(--teal)}
         .stat-divider{width:1px;align-self:stretch;background:linear-gradient(to bottom,transparent,var(--brd-h),transparent);max-height:42px}
+
+        /* Modal Styles */
+        .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:200;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+        .modal-overlay.open{opacity:1;pointer-events:all}
+        .modal-content{background:var(--bg-card);border:1px solid var(--brd);border-radius:16px;max-width:400px;width:90%;padding:40px;position:relative;text-align:center;transform:scale(.95);transition:transform .3s;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+        .modal-overlay.open .modal-content{transform:scale(1)}
+        .modal-img{width:110px;height:110px;border-radius:50%;object-fit:cover;margin-bottom:20px;border:3px solid var(--teal);box-shadow:0 0 20px rgba(45,212,191,.2)}
+        .modal-close{position:absolute;top:12px;right:12px;background:var(--bg-el);border:1px solid var(--brd);width:32px;height:32px;border-radius:8px;cursor:pointer;color:var(--tx2);transition:all .2s;display:flex;align-items:center;justify-content:center}
+        .modal-close:hover{background:var(--teal);color:var(--bg);border-color:var(--teal)}
+
         @media(max-width:768px){.pimg-w img{height:160px}}
         @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
     </style>
@@ -107,6 +123,8 @@
             </div>
             <button class="hamb md:hidden flex flex-col gap-1.5 p-2" id="menuBtn" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
         </div>
+        <!-- Scroll Progress Bar added here -->
+        <div id="scrollProgress"></div>
     </nav>
 
     <div class="mob-ov" id="mobOv"></div>
@@ -119,6 +137,19 @@
             <a href="#skills" class="nav-link text-lg mob-link">Skills</a>
             <a href="#contact" class="nav-link text-lg mob-link">Contact</a>
             <div class="flex items-center gap-2.5 mt-4 pt-4" style="border-top:1px solid var(--brd)"><div class="sd"></div><span style="color:var(--tx2);font-size:.82rem">Available for work</span></div>
+        </div>
+    </div>
+
+    <!-- Welcome Modal -->
+    <div id="welcomeModal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="closeModal" class="modal-close"><i class="fas fa-times"></i></button>
+            <img src="./linkedin_dp.png" alt="Wisam Ahmad" class="modal-img mx-auto">
+            <h3 class="text-xl font-bold mb-2">Hi, I'm <span style="color:var(--teal)">Wisam</span></h3>
+            <p style="color:var(--tx2);font-size:.9rem;line-height:1.6;margin-bottom:24px">A Software Engineer passionate about building scalable web applications and AI-driven solutions. I transform business ideas into production-grade software.</p>
+            <button onclick="downloadResume()" class="btn-p w-full justify-center">
+                <i class="fas fa-file-arrow-down"></i> Download Resume
+            </button>
         </div>
     </div>
 
@@ -549,7 +580,34 @@
         sections.forEach(s=>navObs.observe(s));
 
         const navbar=document.getElementById('navbar');
-        window.addEventListener('scroll',()=>{navbar.style.background=window.scrollY>60?'rgba(13,17,23,.92)':'rgba(13,17,23,.75)'},{passive:true});
+        
+        // Scroll Progress Bar Logic
+        const progressBar = document.getElementById('scrollProgress');
+        window.addEventListener('scroll',()=>{
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + "%";
+            
+            // Navbar background logic
+            navbar.style.background=winScroll>60?'rgba(13,17,23,.92)':'rgba(13,17,23,.75)'
+        },{passive:true});
+
+        // Modal Logic
+        const modal = document.getElementById('welcomeModal');
+        const closeBtn = document.getElementById('closeModal');
+        
+        // Show modal after 1.5 seconds
+        setTimeout(() => {
+            modal.classList.add('open');
+        }, 1500);
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('open');
+        });
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.remove('open');
+        });
 
         const form=document.getElementById('contactForm');
         const submitBtn=document.getElementById('submitBtn');
@@ -616,6 +674,9 @@
             a.click();
             document.body.removeChild(a);
             showToast('Resume download started!','fa-file-arrow-down');
+            // Close modal if open
+            const modal = document.getElementById('welcomeModal');
+            if (modal) modal.classList.remove('open');
         };
     })();
     </script>
